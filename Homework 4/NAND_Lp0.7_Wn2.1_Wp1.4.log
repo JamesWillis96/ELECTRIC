@@ -1,0 +1,27 @@
+LTspice 26.0.1 for Windows
+Circuit: C:\Users\jbwil\OneDrive - University of Wyoming\Documents\ELECTRIC FILES\NAND_Lp0.7_Wn2.1_Wp1.4.spi
+Start Time: Sun Mar  8 19:44:06 2026
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+solver = Normal
+Maximum thread count: 16
+tnom = 27
+temp = 27
+method = trap
+Direct Newton iteration succeeded in finding operating point.
+Total elapsed time: 0.256 seconds.
+
+Files loaded:
+C:\Users\jbwil\OneDrive - University of Wyoming\Documents\ELECTRIC FILES\NAND_Lp0.7_Wn2.1_Wp1.4.spi
+C:\Users\jbwil\OneDrive - University of Wyoming\Documents\ELECTRIC FILES\AMI0p5BSIM.txt
+
+tphl_b=2.0008383528e-10 FROM 2.05e-08 TO 2.07000838353e-08
+t_fall_b=4.99042216192e-10 FROM 2.04671881091e-08 TO 2.09662303253e-08
+tplh_a=5.80520059998e-10 FROM 3.05e-08 TO 3.108052006e-08
+t_rise_a=8.23561914607e-10 FROM 3.0742201189e-08 TO 3.15657631036e-08
+tphl_a=2.49963104679e-10 FROM 4.05e-08 TO 4.07499631047e-08
+t_fall_a=5.47128161645e-10 FROM 4.04727557106e-08 TO 4.10198838723e-08
+tplh_b=6.6472291718e-10 FROM 5.05e-08 TO 5.11647229172e-08
+t_rise_b=9.50726303817e-10 FROM 5.07578172508e-08 TO 5.17085435547e-08

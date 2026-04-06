@@ -1,0 +1,7 @@
+.MODEL N NMOS (                                 LEVEL  = 1       
++ GAMMA  = 0.59       PHI    = 0.7             VTO    = 0.746       
++ KP     = 75E-6      LAMBDA = 0.034     )                                   *                                                                                                                                                           
+.MODEL P PMOS (                                 LEVEL  = 1        
++ GAMMA  = 0.624       PHI    = 0.7             VTO    = -0.92
++ KP     = 27E-6     LAMBDA = 0.041     )                            
+*                                                             

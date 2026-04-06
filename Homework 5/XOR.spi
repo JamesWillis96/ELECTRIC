@@ -1,0 +1,125 @@
+*** SPICE deck for cell XOR{lay} from library HW5_NOR
+*** Created on Sun Mar 29, 2026 14:09:29
+*** Last revised on Sun Mar 29, 2026 15:07:26
+*** Written on Sun Mar 29, 2026 15:10:01 by Electric VLSI Design System, version 9.08
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+***    P-Active:	areacap=0.9FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    N-Active:	areacap=0.9FF/um^2,	edgecap=0.0FF/um,	res=3.0ohms/sq
+***    Polysilicon-1:	areacap=0.1467FF/um^2,	edgecap=0.0608FF/um,	res=6.2ohms/sq
+***    Polysilicon-2:	areacap=1.0FF/um^2,	edgecap=0.0FF/um,	res=50.0ohms/sq
+***    Transistor-Poly:	areacap=0.09FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    Poly-Cut:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=2.2ohms/sq
+***    Active-Cut:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    Metal-1:	areacap=0.1209FF/um^2,	edgecap=0.1104FF/um,	res=0.078ohms/sq
+***    Via1:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=1.0ohms/sq
+***    Metal-2:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via2:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.9ohms/sq
+***    Metal-3:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via3:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-4:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via4:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-5:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via5:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-6:	areacap=0.0423FF/um^2,	edgecap=0.1273FF/um,	res=0.036ohms/sq
+***    Hi-Res:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=1.0ohms/sq
+* Model cards described in this file:
+.include 'C:\Users\jbwil\OneDrive - University of Wyoming\Documents\ELECTRIC FILES\AMI0p5BSIM.txt'
+
+*** TOP LEVEL CELL: XOR{lay}
+Mnmos@4 OUT A#2nmos@4_poly-left net@52 gnd N L=0.7U W=1.05U AS=2.664P AD=1.96P PS=5.95U PD=4.2U
+Mnmos@5 net@52 _B#0nmos@5_poly-right OUT gnd N L=0.7U W=1.05U AS=1.96P AD=2.664P PS=4.2U PD=5.95U
+Mnmos@6 gnd _A#0nmos@6_poly-right net@52 gnd N L=0.7U W=1.05U AS=2.664P AD=1.899P PS=5.95U PD=4.2U
+Mnmos@7 net@52 B#0nmos@7_poly-right gnd gnd N L=0.7U W=1.05U AS=1.899P AD=2.664P PS=4.2U PD=5.95U
+Mpmos@4 net@13 A#0pmos@4_poly-left vdd vdd P L=0.7U W=1.4U AS=6.615P AD=1.439P PS=14.7U PD=3.675U
+Mpmos@5 OUT _B#1pmos@5_poly-left net@13 vdd P L=0.7U W=1.4U AS=1.439P AD=1.96P PS=3.675U PD=4.2U
+Mpmos@6 net@42 _A#1pmos@6_poly-left OUT vdd P L=0.7U W=1.4U AS=1.96P AD=1.439P PS=4.2U PD=3.675U
+Mpmos@7 vdd B#3pmos@7_poly-left net@42 vdd P L=0.7U W=1.4U AS=1.439P AD=6.615P PS=3.675U PD=14.7U
+** Extracted Parasitic Capacitors ***
+C0 net@52 0 5.58fF
+C1 OUT 0 6.086fF
+C2 A#2nmos@4_poly-left 0 0.222fF
+C3 _B#0nmos@5_poly-right 0 0.265fF
+C4 _A#0nmos@6_poly-right 0 0.265fF
+C5 B#0nmos@7_poly-right 0 0.222fF
+C6 A#1pin@25_polysilicon-1 0 0.222fF
+C7 B#1pin@27_polysilicon-1 0 0.236fF
+C8 B#2pin@28_polysilicon-1 0 0.222fF
+C9 A 0 0.118fF
+C10 ~B 0 0.118fF
+C11 A#4pin@33_polysilicon-1 0 0.236fF
+C12 ~A 0 0.118fF
+C13 B 0 0.118fF
+C14 _B#1pmos@5_poly-left 0 0.147fF
+C15 _A#1pmos@6_poly-left 0 0.147fF
+** Extracted Parasitic Resistors ***
+R0 A#0pmos@4_poly-left A#0pmos@4_poly-left##0 5.425
+R1 A#0pmos@4_poly-left##0 A#1pin@25_polysilicon-1 5.425
+R2 _B#0nmos@5_poly-right _B#0nmos@5_poly-right##0 7.75
+C16 _B#0nmos@5_poly-right##0 0 0.147fF
+R3 _B#0nmos@5_poly-right##0 _B#0nmos@5_poly-right##1 7.75
+C17 _B#0nmos@5_poly-right##1 0 0.147fF
+R4 _B#0nmos@5_poly-right##1 _B#1pmos@5_poly-left 7.75
+R5 _A#0nmos@6_poly-right _A#0nmos@6_poly-right##0 7.75
+C18 _A#0nmos@6_poly-right##0 0 0.147fF
+R6 _A#0nmos@6_poly-right##0 _A#0nmos@6_poly-right##1 7.75
+C19 _A#0nmos@6_poly-right##1 0 0.147fF
+R7 _A#0nmos@6_poly-right##1 _A#1pmos@6_poly-left 7.75
+R8 B#0nmos@7_poly-right B#0nmos@7_poly-right##0 6.2
+C20 B#0nmos@7_poly-right##0 0 0.105fF
+R9 B#0nmos@7_poly-right##0 B#1pin@27_polysilicon-1 6.2
+R10 B#1pin@27_polysilicon-1 B#1pin@27_polysilicon-1##0 7.75
+C21 B#1pin@27_polysilicon-1##0 0 0.131fF
+R11 B#1pin@27_polysilicon-1##0 B#2pin@28_polysilicon-1 7.75
+R12 B#2pin@28_polysilicon-1 B#2pin@28_polysilicon-1##0 5.425
+R13 B#2pin@28_polysilicon-1##0 B#3pmos@7_poly-left 5.425
+R14 A#2nmos@4_poly-left A 9.3
+R15 _B#0nmos@5_poly-right ~B 9.3
+R16 A#2nmos@4_poly-left A#2nmos@4_poly-left##0 6.2
+C22 A#2nmos@4_poly-left##0 0 0.105fF
+R17 A#2nmos@4_poly-left##0 A#4pin@33_polysilicon-1 6.2
+R18 A#4pin@33_polysilicon-1 A#4pin@33_polysilicon-1##0 7.75
+C23 A#4pin@33_polysilicon-1##0 0 0.131fF
+R19 A#4pin@33_polysilicon-1##0 A#1pin@25_polysilicon-1 7.75
+R20 _A#0nmos@6_poly-right ~A 9.3
+R21 B#0nmos@7_poly-right B 9.3
+
+*Output Capacitance
+COUT OUT 0 10fF
+
+* --- Voltage Supplies ---
+Vdd vdd 0 5V
+
+* --- Input Signal Generation (A, B and their complements) ---
+* A transitions every 10ns
+V_A A 0 PULSE(0 5 0 100p 100p 5n 10n)
+V_notA ~A 0 PULSE(5 0 0 100p 100p 5n 10n)
+
+* B transitions every 20ns to create all 4 logic combinations
+V_B B 0 PULSE(0 5 0 100p 100p 10n 20n)
+V_notB ~B 0 PULSE(5 0 0 100p 100p 10n 20n)
+
+* --- Simulation Command ---
+.tran 0 40n
+
+* --- Rise Times (10% to 90%) ---
+.measure tran trise_1 trig V(OUT)=0.5 rise=1 targ V(OUT)=4.5 rise=1
+.measure tran trise_2 trig V(OUT)=0.5 rise=2 targ V(OUT)=4.5 rise=2
+.measure tran trise_3 trig V(OUT)=0.5 rise=3 targ V(OUT)=4.5 rise=3
+.measure tran trise_4 trig V(OUT)=0.5 rise=4 targ V(OUT)=4.5 rise=4
+
+* --- Fall Times (90% to 10%) ---
+.measure tran tfall_1 trig V(OUT)=4.5 fall=1 targ V(OUT)=0.5 fall=1
+.measure tran tfall_2 trig V(OUT)=4.5 fall=2 targ V(OUT)=0.5 fall=2
+.measure tran tfall_3 trig V(OUT)=4.5 fall=3 targ V(OUT)=0.5 fall=3
+.measure tran tfall_4 trig V(OUT)=4.5 fall=4 targ V(OUT)=0.5 fall=4
+
+* --- Nested Max Calculations ---
+.measure tran max_r12 param max(trise_1, trise_2)
+.measure tran max_r34 param max(trise_3, trise_4)
+.measure tran max_rise param max(max_r12, max_r34)
+
+.measure tran max_f12 param max(tfall_1, tfall_2)
+.measure tran max_f34 param max(tfall_3, tfall_4)
+.measure tran max_fall param max(max_f12, max_f34)
+.END

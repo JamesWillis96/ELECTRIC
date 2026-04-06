@@ -1,0 +1,102 @@
+*** SPICE deck for cell NAND_Lp0.7_Wn2.1_Wp1.4{lay} from library VLSI_HW4_P3
+*** Created on Sun Mar 08, 2026 18:43:20
+*** Last revised on Sun Mar 08, 2026 19:18:07
+*** Written on Sun Mar 08, 2026 19:21:13 by Electric VLSI Design System, version 9.08
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+***    P-Active:	areacap=0.9FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    N-Active:	areacap=0.9FF/um^2,	edgecap=0.0FF/um,	res=3.0ohms/sq
+***    Polysilicon-1:	areacap=0.1467FF/um^2,	edgecap=0.0608FF/um,	res=6.2ohms/sq
+***    Polysilicon-2:	areacap=1.0FF/um^2,	edgecap=0.0FF/um,	res=50.0ohms/sq
+***    Transistor-Poly:	areacap=0.09FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    Poly-Cut:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=2.2ohms/sq
+***    Active-Cut:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    Metal-1:	areacap=0.1209FF/um^2,	edgecap=0.1104FF/um,	res=0.078ohms/sq
+***    Via1:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=1.0ohms/sq
+***    Metal-2:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via2:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.9ohms/sq
+***    Metal-3:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via3:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-4:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via4:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-5:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via5:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-6:	areacap=0.0423FF/um^2,	edgecap=0.1273FF/um,	res=0.036ohms/sq
+***    Hi-Res:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=1.0ohms/sq
+* Model cards described in this file:
+.include 'C:\Users\jbwil\OneDrive - University of Wyoming\Documents\ELECTRIC FILES\AMI0p5BSIM.txt'
+
+*** TOP LEVEL CELL: NAND_Lp0.7_Wn2.1_Wp1.4{lay}
+Mnmos@0 net@0 IN_A#0nmos@0_poly-left OUT gnd N L=0.7U W=2.1U AS=4.247P AD=3.124P PS=8.633U PD=5.075U
+Mnmos@1 gnd IN_B#2nmos@1_poly-left net@0 gnd N L=0.7U W=2.1U AS=3.124P AD=7.411P PS=5.075U PD=15.75U
+Mpmos@0 vdd IN_B#0pmos@0_poly-right OUT vdd P L=0.7U W=1.4U AS=4.247P AD=7.105P PS=8.633U PD=15.4U
+Mpmos@1 OUT IN_A#3pmos@1_poly-right vdd vdd P L=0.7U W=1.4U AS=7.105P AD=4.247P PS=15.4U PD=8.633U
+** Extracted Parasitic Capacitors ***
+C0 OUT 0 6.28fF
+C1 IN_A 0 0.408fF
+C2 IN_A#0nmos@0_poly-left 0 0.105fF
+C3 IN_B#2nmos@1_poly-left 0 0.131fF
+C4 IN_A#1pin@7_polysilicon-1 0 0.317fF
+C5 IN_B#1pin@9_polysilicon-1 0 0.353fF
+C6 IN_B#0pmos@0_poly-right 0 0.131fF
+C7 IN_A#3pmos@1_poly-right 0 0.157fF
+
+** Additional Load Capacitance **
+
+C_OUT OUT 0 10fF
+
+** Extracted Parasitic Resistors ***
+R0 IN_A#0nmos@0_poly-left IN_A#0nmos@0_poly-left##0 6.2
+C8 IN_A#0nmos@0_poly-left##0 0 0.105fF
+R1 IN_A#0nmos@0_poly-left##0 IN_A#1pin@7_polysilicon-1 6.2
+R2 IN_A#1pin@7_polysilicon-1 IN_A#1pin@7_polysilicon-1##0 9.3
+C9 IN_A#1pin@7_polysilicon-1##0 0 0.212fF
+R3 IN_A#1pin@7_polysilicon-1##0 IN_A#1pin@7_polysilicon-1##1 9.3
+C10 IN_A#1pin@7_polysilicon-1##1 0 0.212fF
+R4 IN_A#1pin@7_polysilicon-1##1 IN_A#1pin@7_polysilicon-1##2 9.3
+C11 IN_A#1pin@7_polysilicon-1##2 0 0.212fF
+R5 IN_A#1pin@7_polysilicon-1##2 IN_A#1pin@7_polysilicon-1##3 9.3
+C12 IN_A#1pin@7_polysilicon-1##3 0 0.212fF
+R6 IN_A#1pin@7_polysilicon-1##3 IN_A#1pin@7_polysilicon-1##4 9.3
+C13 IN_A#1pin@7_polysilicon-1##4 0 0.212fF
+R7 IN_A#1pin@7_polysilicon-1##4 IN_A#1pin@7_polysilicon-1##5 9.3
+C14 IN_A#1pin@7_polysilicon-1##5 0 0.212fF
+R8 IN_A#1pin@7_polysilicon-1##5 IN_A#1pin@7_polysilicon-1##6 9.3
+C15 IN_A#1pin@7_polysilicon-1##6 0 0.212fF
+R9 IN_A#1pin@7_polysilicon-1##6 IN_A#1pin@7_polysilicon-1##7 9.3
+C16 IN_A#1pin@7_polysilicon-1##7 0 0.212fF
+R10 IN_A#1pin@7_polysilicon-1##7 IN_A 9.3
+R11 IN_A IN_A##0 9.3
+C17 IN_A##0 0 0.157fF
+R12 IN_A##0 IN_A#3pmos@1_poly-right 9.3
+R13 IN_B#0pmos@0_poly-right IN_B#0pmos@0_poly-right##0 7.75
+C18 IN_B#0pmos@0_poly-right##0 0 0.131fF
+R14 IN_B#0pmos@0_poly-right##0 IN_B#1pin@9_polysilicon-1 7.75
+R15 IN_B#1pin@9_polysilicon-1 IN_B#1pin@9_polysilicon-1##0 7.75
+C19 IN_B#1pin@9_polysilicon-1##0 0 0.131fF
+R16 IN_B#1pin@9_polysilicon-1##0 IN_B#2nmos@1_poly-left 7.75
+R17 IN_B IN_B##0 5.425
+R18 IN_B##0 IN_B#1pin@9_polysilicon-1 5.425
+
+** Power Supplies **
+V_VDD vdd 0 5
+V_GND gnd 0 0
+
+** Worst-Case Logic: A is switching, B is tied High (5V) **
+V_IN_A IN_A 0 0        ; This source will be swept by the .dc command
+V_IN_B IN_B 0 5        ; Held High to enable the NMOS stack and cause body effect
+
+** DC Sweep: Vary V_IN_A from 0V to 5V **
+.dc V_IN_A 0 5 0.001
+
+** Measure Directives for Noise Margins **
+.measure DC VIL FIND V(IN_A) WHEN d(V(OUT))=-1 CROSS=1
+.measure DC VIH FIND V(IN_A) WHEN d(V(OUT))=-1 CROSS=2
+.measure DC VOL FIND V(OUT) WHEN V(IN_A)=VIH
+.measure DC VOH FIND V(OUT) WHEN V(IN_A)=VIL
+
+** Calculation of Results **
+.measure DC NML param VIL-VOL
+.measure DC NMH param VOH-VIH
+
+.END

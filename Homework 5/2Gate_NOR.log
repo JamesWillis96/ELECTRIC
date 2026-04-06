@@ -1,0 +1,33 @@
+LTspice 26.0.1 for Windows
+Circuit: C:\Users\jbwil\OneDrive - University of Wyoming\Documents\ELECTRIC FILES\Homework 5\2Gate_NOR.spi
+Start Time: Sun Mar 29 16:39:36 2026
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+solver = Normal
+Maximum thread count: 16
+tnom = 27
+temp = 27
+method = trap
+Direct Newton iteration succeeded in finding operating point.
+Total elapsed time: 0.071 seconds.
+
+Files loaded:
+C:\Users\jbwil\OneDrive - University of Wyoming\Documents\ELECTRIC FILES\Homework 5\2Gate_NOR.spi
+C:\Users\jbwil\OneDrive - University of Wyoming\Documents\ELECTRIC FILES\AMI0p5BSIM.txt
+
+trise_1=1.06120665364e-09 FROM 7.32463094312e-09 TO 8.38583759675e-09
+trise_2=1.0611787648e-09 FROM 1.72926027635e-08 TO 1.83537815283e-08
+trise_3=1.06131245715e-09 FROM 2.73242198541e-08 TO 2.83855323112e-08
+trise_4=1.06094467933e-09 FROM 3.73239275264e-08 TO 3.83848722057e-08
+tfall_1=6.22329507651e-10 FROM 2.14038576682e-09 TO 2.76271527447e-09
+tfall_2=2.77292628911e-10 FROM 1.21068641931e-08 TO 1.2384156822e-08
+tfall_3=6.22629763413e-10 FROM 2.21406698994e-08 TO 2.27632996628e-08
+tfall_4=6.21884224248e-10 FROM 3.21404012141e-08 TO 3.27622854384e-08
+max_r12: max(trise_1, trise_2)=1.06120665364e-09
+max_r34: max(trise_3, trise_4)=1.06131245715e-09
+max_rise: max(max_r12, max_r34)=1.06131245715e-09
+max_f12: max(tfall_1, tfall_2)=6.22329507651e-10
+max_f34: max(tfall_3, tfall_4)=6.22629763413e-10
+max_fall: max(max_f12, max_f34)=6.22629763413e-10

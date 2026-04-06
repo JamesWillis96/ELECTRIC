@@ -1,0 +1,80 @@
+*** SPICE deck for cell P1_Lp0.7_Wn1.05{lay} from library VLSI_HW4_P1
+*** Created on Sun Mar 08, 2026 16:44:18
+*** Last revised on Sun Mar 08, 2026 18:08:57
+*** Written on Sun Mar 08, 2026 18:09:09 by Electric VLSI Design System, version 9.08
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+***    P-Active:	areacap=0.9FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    N-Active:	areacap=0.9FF/um^2,	edgecap=0.0FF/um,	res=3.0ohms/sq
+***    Polysilicon-1:	areacap=0.1467FF/um^2,	edgecap=0.0608FF/um,	res=6.2ohms/sq
+***    Polysilicon-2:	areacap=1.0FF/um^2,	edgecap=0.0FF/um,	res=50.0ohms/sq
+***    Transistor-Poly:	areacap=0.09FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    Poly-Cut:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=2.2ohms/sq
+***    Active-Cut:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    Metal-1:	areacap=0.1209FF/um^2,	edgecap=0.1104FF/um,	res=0.078ohms/sq
+***    Via1:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=1.0ohms/sq
+***    Metal-2:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via2:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.9ohms/sq
+***    Metal-3:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via3:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-4:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via4:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-5:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via5:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-6:	areacap=0.0423FF/um^2,	edgecap=0.1273FF/um,	res=0.036ohms/sq
+***    Hi-Res:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=1.0ohms/sq
+* Model cards described in this file:
+.include 'C:\Users\jbwil\OneDrive - University of Wyoming\Documents\ELECTRIC FILES\AMI0p5BSIM.txt'
+
+*** TOP LEVEL CELL: P1_Lp0.7_Wn1.05{lay}
+Mnmos@1 gnd IN#0nmos@1_poly-left OUT gnd N L=0.7U W=1.05U AS=3.614P AD=4.165P PS=7.875U PD=9.1U
+Mpmos@2 OUT IN#2pin@1_polysilicon-1 vdd vdd P L=0.7U W=1.4U AS=7.35P AD=3.614P PS=15.75U PD=7.875U
+** Extracted Parasitic Capacitors ***
+C0 OUT 0 2.048fF
+C1 IN#0nmos@1_poly-left 0 0.275fF
+C2 IN#2pin@1_polysilicon-1 0 0.228fF
+C3 IN#4pin@2_polysilicon-1 0 0.444fF
+
+** Load Capacitance **
+C_LOAD OUT 0 10p
+
+** Extracted Parasitic Resistors ***
+R0 IN#0nmos@1_poly-left IN#0nmos@1_poly-left##0 9.688
+C4 IN#0nmos@1_poly-left##0 0 0.196fF
+R1 IN#0nmos@1_poly-left##0 IN#0nmos@1_poly-left##1 9.688
+C5 IN#0nmos@1_poly-left##1 0 0.196fF
+R2 IN#0nmos@1_poly-left##1 IN#0nmos@1_poly-left##2 9.688
+C6 IN#0nmos@1_poly-left##2 0 0.196fF
+R3 IN#0nmos@1_poly-left##2 IN#4pin@2_polysilicon-1 9.688
+R4 IN#4pin@2_polysilicon-1 IN#4pin@2_polysilicon-1##0 9.3
+C7 IN#4pin@2_polysilicon-1##0 0 0.188fF
+R5 IN#4pin@2_polysilicon-1##0 IN#4pin@2_polysilicon-1##1 9.3
+C8 IN#4pin@2_polysilicon-1##1 0 0.188fF
+R6 IN#4pin@2_polysilicon-1##1 IN#4pin@2_polysilicon-1##2 9.3
+C9 IN#4pin@2_polysilicon-1##2 0 0.188fF
+R7 IN#4pin@2_polysilicon-1##2 IN#2pin@1_polysilicon-1 9.3
+R8 IN#4pin@2_polysilicon-1 IN 4.65
+
+** Power Supplies and Input **
+V_VDD vdd 0 5
+V_GND gnd 0 0
+V_IN  IN  0 0
+
+** DC Sweep: Sweep V_IN from 0 to 5V in small steps **
+.dc V_IN 0 5 0.001
+
+** Measure Noise Margin Parameters **
+* 1. Find VIL and VIH where slope (derivative) is -1
+.measure DC VIL FIND V(IN) WHEN d(V(OUT))=-1 CROSS=1
+.measure DC VIH FIND V(IN) WHEN d(V(OUT))=-1 CROSS=2
+
+* 2. Find corresponding Output High (VOH) and Output Low (VOL)
+.measure DC VOH FIND V(OUT) WHEN V(IN)=VIL
+.measure DC VOL FIND V(OUT) WHEN V(IN)=VIH
+
+* 3. Calculate Noise Margins
+.measure DC NML param VIL-VOL
+.measure DC NMH param VOH-VIH
+
+
+.END
