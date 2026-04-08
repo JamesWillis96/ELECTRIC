@@ -1,0 +1,57 @@
+*** SPICE deck for cell Subtractor_V1{lay} from library HW5_NOR
+*** Created on Wed Apr 08, 2026 11:01:21
+*** Last revised on Wed Apr 08, 2026 12:32:48
+*** Written on Wed Apr 08, 2026 12:41:14 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+* Model cards are described in this file:
+.include 'C:\Users\jwillis8\Documents\ELECTRIC\AMI0p5BSIM.txt'
+
+*** TOP LEVEL CELL: Subtractor_V1{lay}
+Mnmos@0 gnd SB net@9 gnd N L=0.7U W=2.1U AS=3.491P AD=5.451P PS=6.475U PD=11.55U
+Mnmos@1 net@9 A! gnd gnd N L=0.7U W=2.1U AS=5.451P AD=3.491P PS=11.55U PD=6.475U
+Mnmos@2 net@3 A net@9 gnd N L=0.7U W=2.1U AS=3.491P AD=3.001P PS=6.475U PD=4.9U
+Mnmos@3 net@9 !SB net@3 gnd N L=0.7U W=2.1U AS=3.001P AD=3.491P PS=4.9U PD=6.475U
+Mnmos@4 gnd net@3 net@42 gnd N L=0.7U W=2.1U AS=3.491P AD=5.451P PS=6.475U PD=11.55U
+Mnmos@5 net@42 !C gnd gnd N L=0.7U W=2.1U AS=5.451P AD=3.491P PS=11.55U PD=6.475U
+Mnmos@6 OUT C net@42 gnd N L=0.7U W=2.1U AS=3.491P AD=3.001P PS=6.475U PD=4.9U
+Mnmos@7 net@42 net@58 OUT gnd N L=0.7U W=2.1U AS=3.001P AD=3.491P PS=4.9U PD=6.475U
+Mnmos@8 gnd B net@82 gnd N L=0.7U W=2.1U AS=3.491P AD=5.451P PS=6.475U PD=11.55U
+Mnmos@9 net@82 !SA gnd gnd N L=0.7U W=2.1U AS=5.451P AD=3.491P PS=11.55U PD=6.475U
+Mnmos@10 SB SA net@82 gnd N L=0.7U W=2.1U AS=3.491P AD=3.001P PS=6.475U PD=4.9U
+Mnmos@11 net@82 !B SB gnd N L=0.7U W=2.1U AS=3.001P AD=3.491P PS=4.9U PD=6.475U
+Mnmos@12 !SA SA gnd gnd N L=0.7U W=1.05U AS=5.451P AD=3.491P PS=11.55U PD=7.7U
+Mnmos@17 !B B gnd gnd N L=0.7U W=1.05U AS=5.451P AD=3.491P PS=11.55U PD=7.7U
+Mnmos@18 A! A gnd gnd N L=0.7U W=1.05U AS=5.451P AD=3.491P PS=11.55U PD=7.7U
+Mnmos@19 net@58 net@3 gnd gnd N L=0.7U W=1.05U AS=5.451P AD=3.491P PS=11.55U PD=7.7U
+Mnmos@20 !SB SB gnd gnd N L=0.7U W=1.05U AS=5.451P AD=3.491P PS=11.55U PD=7.7U
+Mnmos@21 !C C gnd gnd N L=0.7U W=1.05U AS=5.451P AD=3.491P PS=11.55U PD=7.7U
+Mpmos@0 net@0 SB vdd vdd P L=0.7U W=2.8U AS=7.493P AD=1.929P PS=14.54U PD=4.725U
+Mpmos@1 net@3 A! net@0 vdd P L=0.7U W=2.8U AS=1.929P AD=3.001P PS=4.725U PD=4.9U
+Mpmos@2 net@2 A net@3 vdd P L=0.7U W=2.8U AS=3.001P AD=1.991P PS=4.9U PD=4.55U
+Mpmos@3 vdd !SB net@2 vdd P L=0.7U W=2.8U AS=1.991P AD=7.493P PS=4.55U PD=14.54U
+Mpmos@4 net@40 net@3 vdd vdd P L=0.7U W=2.8U AS=7.493P AD=1.929P PS=14.54U PD=4.725U
+Mpmos@5 OUT !C net@40 vdd P L=0.7U W=2.8U AS=1.929P AD=3.001P PS=4.725U PD=4.9U
+Mpmos@6 net@52 C OUT vdd P L=0.7U W=2.8U AS=3.001P AD=1.991P PS=4.9U PD=4.55U
+Mpmos@7 vdd net@58 net@52 vdd P L=0.7U W=2.8U AS=1.991P AD=7.493P PS=4.55U PD=14.54U
+Mpmos@8 net@80 B vdd vdd P L=0.7U W=2.8U AS=7.493P AD=1.929P PS=14.54U PD=4.725U
+Mpmos@9 SB !SA net@80 vdd P L=0.7U W=2.8U AS=1.929P AD=3.001P PS=4.725U PD=4.9U
+Mpmos@10 net@92 SA SB vdd P L=0.7U W=2.8U AS=3.001P AD=1.991P PS=4.9U PD=4.55U
+Mpmos@11 vdd !B net@92 vdd P L=0.7U W=2.8U AS=1.991P AD=7.493P PS=4.55U PD=14.54U
+Mpmos@12 !SA SA vdd vdd P L=0.7U W=1.4U AS=7.493P AD=3.491P PS=14.54U PD=7.7U
+Mpmos@17 !B B vdd vdd P L=0.7U W=1.4U AS=7.493P AD=3.491P PS=14.54U PD=7.7U
+Mpmos@18 A! A vdd vdd P L=0.7U W=1.4U AS=7.493P AD=3.491P PS=14.54U PD=7.7U
+Mpmos@19 net@58 net@3 vdd vdd P L=0.7U W=1.4U AS=7.493P AD=3.491P PS=14.54U PD=7.7U
+Mpmos@20 !SB SB vdd vdd P L=0.7U W=1.4U AS=7.493P AD=3.491P PS=14.54U PD=7.7U
+Mpmos@21 !C C vdd vdd P L=0.7U W=1.4U AS=7.493P AD=3.491P PS=14.54U PD=7.7U
+
+Vdd vdd 0 5
+Vgnd gnd 0 0
+VSA SA 0 5
+VA  A  0 0
+VB  B  0 0
+VC  C  0 0
+.op
+
+
+.end

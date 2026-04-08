@@ -1,0 +1,27 @@
+LTspice 26.0.1 for Windows
+Circuit: C:\Users\jwillis8\Documents\ELECTRIC\Homework_5\Subtractor_V1.spi
+Start Time: Wed Apr  8 13:11:27 2026
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+solver = Normal
+Maximum thread count: 14
+tnom = 27
+temp = 27
+method = trap
+Direct Newton iteration succeeded in finding operating point.
+Warning: Simulation tolerance relaxed to achieve convergence from 9.9999998377515902e-18 to 1.0000999837751590e-17 seconds.
+Warning: Simulation tolerance relaxed to achieve convergence from 1.0000999837751590e-17 to 1.0001999837751591e-17 seconds.
+Warning: Simulation tolerance relaxed to achieve convergence from 1.0001999837751591e-17 to 1.0002999837751591e-17 seconds.
+Warning: Simulation tolerance relaxed to achieve convergence from 1.0002999837751591e-17 to 1.0003999837751591e-17 seconds.
+Warning: Simulation tolerance relaxed to achieve convergence from 1.0003999837751591e-17 to 1.0004999837751591e-17 seconds.
+Warning: Simulation tolerance relaxed to achieve convergence from 1.0006999837751592e-17 to 1.0007999837751592e-17 seconds.
+Warning: Simulation tolerance relaxed to achieve convergence from 1.0007999837751592e-17 to 1.0008999837751592e-17 seconds.
+Warning: Simulation tolerance relaxed to achieve convergence from 1.0008999837751592e-17 to 1.0009999837751593e-17 seconds.
+Warning: Simulation tolerance relaxed to achieve convergence from 1.0009999837751593e-17 to 1.0010999837751593e-17 seconds.
+Warning: Simulation tolerance relaxed to achieve convergence from 1.0010999837751593e-17 to 1.0011999837751593e-17 seconds.
+Warning: Simulation tolerance relaxed to achieve convergence from 1.0011999837751593e-17 to 1.0012999837751593e-17 seconds.
+Warning: Simulation tolerance relaxed to achieve convergence from 1.0012999837751593e-17 to 1.0013999837751593e-17 seconds.
+Warning: Simulation tolerance relaxed to achieve convergence from 1.0013999837751593e-17 to 1.0014999837751594e-17 seconds.
+Warning: Simulation tolerance relaxed to achieve convergence from 1.0014999837751594e-17 
