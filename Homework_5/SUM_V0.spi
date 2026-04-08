@@ -1,0 +1,71 @@
+*** SPICE deck for cell SUM_V0{lay} from library HW5_NOR
+*** Created on Mon Apr 06, 2026 13:06:16
+*** Last revised on Tue Apr 07, 2026 08:29:44
+*** Written on Tue Apr 07, 2026 08:34:47 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+*CMOS/BULK-NWELL (PRELIMINARY PARAMETERS)
+.include C:\Users\jbwil\AMI0p5BSIM.txt
+
+*** TOP LEVEL CELL: SUM_V0{lay}
+Mnmos@0 gnd A net@2 gnd N L=0.7U W=2.1UaA
+Mnmos@1 net@2 net@6 gnd gnd N L=0.7U W=2.1U
+Mnmos@2 net@14 B net@2 gnd N L=0.7U W=2.1U
+Mnmos@3 net@2 net@18 net@14 gnd N L=0.7U W=2.1U
+Mnmos@4 gnd Ci net@45 gnd N L=0.7U W=2.1U
+Mnmos@5 net@45 net@76 gnd gnd N L=0.7U W=2.1U
+Mnmos@6 OUT net@14 net@45 gnd N L=0.7U W=2.1U
+Mnmos@7 net@45 net@50 OUT gnd N L=0.7U W=2.1U
+Mnmos@8 net@18 A gnd gnd N L=0.7U W=1.05U
+Mnmos@9 net@6 B gnd gnd N L=0.7U W=1.05U
+Mnmos@10 net@76 net@14 gnd gnd N L=0.7U W=1.05U
+Mnmos@11 net@50 Ci gnd gnd N L=0.7U W=1.05U
+Mpmos@0 net@0 A vdd vdd P L=0.7U W=2.8U
+Mpmos@1 net@14 net@6 net@0 vdd P L=0.7U W=2.8U
+Mpmos@2 net@12 B net@14 vdd P L=0.7U W=2.8U
+Mpmos@3 vdd net@18 net@12 vdd P L=0.7U W=2.8U
+Mpmos@4 net@40 Ci vdd vdd P L=0.7U W=2.8U
+Mpmos@5 OUT net@76 net@40 vdd P L=0.7U W=2.8U
+Mpmos@6 net@44 net@14 OUT vdd P L=0.7U W=2.8U
+Mpmos@7 vdd net@50 net@44 vdd P L=0.7U W=2.8U
+Mpmos@8 net@18 A vdd vdd P L=0.7U W=1.4U
+Mpmos@9 net@6 B vdd vdd P L=0.7U W=1.4U
+Mpmos@10 net@76 net@14 vdd vdd P L=0.7U W=1.4U
+Mpmos@11 net@50 Ci vdd vdd P L=0.7U W=1.4U
+*** TIMING CHARACTERIZATION - POWER SUPPLIES
+Vdd vdd 0 DC 5V
+Vgnd gnd 0 DC 0V
+
+*** TEST CASE 1: WORST CASE FALL TIME
+*** Worst Fall: C=1, B=0, A: 0->1 (A rising, output falling)
+*Vci Ci 0 DC 5V
+*VB B 0 DC 0V
+*VA A 0 PULSE(0V 5V 1ns 10ps 10ps 2ns 10ns)
+
+*** TRANSIENT ANALYSIS - 10ns window with fine resolution
+*.TRAN 0 4ns 0 0.1ps
+
+*** MEASUREMENTS FOR WORST CASE FALL TIME
+*.MEAS TRAN tpd_fall_A_rise TRIG V(A) VAL=2.5V RISE=1 TARG V(OUT) VAL=2.5V FALL=1
+*.MEAS TRAN fall_time_90_10 TRIG V(OUT) VAL=4.5V FALL=1 TARG V(OUT) VAL=0.5V FALL=1
+*.MEAS TRAN input_rise_time TRIG V(A) VAL=0.5V RISE=1 TARG V(A) VAL=4.5V RISE=1
+*.MEAS TRAN output_fall_time TRIG V(OUT) VAL=4.5V FALL=1  TARG V(OUT) VAL=0.5V FALL=1
+
+*** TEST CASE 2: WORST CASE RISE TIME
+*** Worst Rise: C=0, B=1, A: 1->0 (A falling, output rising)
+Vci Ci 0 DC 0V
+VB B 0 DC 5V
+VA A 0 PULSE(5V 0V 1ns 10ps 10ps 2ns 10ns)
+
+*** TRANSIENT ANALYSIS - 10ns window with fine resolution
+.TRAN 0 4ns 0 1ps
+
+
+*** MEASUREMENTS FOR WORST CASE RISE TIME
+.MEAS TRAN tpd_rise_A_fall  TRIG V(A) VAL=2.5V FALL=1 TARG V(OUT) VAL=2.5V RISE=1
+.MEAS TRAN rise_time_10_90 TRIG V(OUT) VAL=0.5V RISE=1 TARG V(OUT) VAL=4.5V RISE=1
+.MEAS TRAN input_fall_time TRIG V(A) VAL=4.5V FALL=1 TARG V(A) VAL=0.5V FALL=1
+.MEAS TRAN output_rise_time TRIG V(OUT) VAL=0.5V RISE=1 TARG V(OUT) VAL=4.5V RISE=1
+
+
+.end
